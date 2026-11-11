@@ -29,13 +29,13 @@ jobs:
 
       - name: Build addon
         run: |
-          cd ReachAddon
+          cd ReAgentsAddons
           chmod +x gradlew
           ./gradlew build --stacktrace
 
       - uses: actions/upload-artifact@v4
         with:
-          name: reach-addon-jar
+          name: ReAgents-addon-jar
           path: |
-            ReachAddon/build/libs/*.jar
-            !ReachAddon/build/libs/*-sources.jar
+            ReAgentsAddons/build/libs/*.jar
+            !ReAgentsAddons/build/libs/*-sources.jar
